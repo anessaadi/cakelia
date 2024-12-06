@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Page</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- remix-icons-link -->
+  <link
+  href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+  rel="stylesheet"
+  />
+  <!-- google-fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+ 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo"><img src="img/ka3ka.png" alt=""></a>
+        <ul class="navlist">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blogs.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        
+    </header>
+    
+    <main class="main">
+      <div class="breadcrumb-blogs" >
+        <a href="index.html">Home</a> &gt; <span>Blog</span>
+    </div>
+      <section id="blog-container" class="blog-container"></section>
+    </main>
+  <!-- custom js link -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const blogContainer = document.getElementById('blog-container');
+  
+      // Example blog data
+      const blogs = [
+        {
+          id: "1",
+          title: "Why Virtual Cakes Are the Future of Celebrations",
+          author: "Anes | Cakelia.com",
+          date: "May 12, 2024",
+          excerpt: "Celebrations are evolving, and virtual cakes are taking center stage in the digital age. Whether...",
+          image: "img/BLOGS/blog001.png",
+          content: "blog1.html"
+        },
+        {
+          id: "2",
+          title: "What Does Your Cake Design Say About You?",
+          author: "Anes | Cakelia.com",
+          date: "May 07, 2024",
+          excerpt: "Ever wondered what your cake design says about your personality? At Cakelia, we believe that cakes...",
+          image: "img/BLOGS/blog002.png",
+          content: "blog2.html"
+        },
+        {
+          id: "3",
+          title: "Blowing Out Candles Virtually: The Weird and Wonderful Psychology Behind It",
+          author: "Anes | Cakelia.com",
+          date: "May 01, 2024",
+          excerpt: "Blowing out candles on a cake is one of the most beloved traditions across the world. But have you...",
+          image: "img/BLOGS/blog003.png",
+          content: "blog3.html"
+        },
+        {
+          id: "4",
+          title: "Famous Cakes in History (And How They’d Look in Cakelia)",
+          author: "Anes | Cakelia.com",
+          date: "April 27, 2024",
+          excerpt: "Cakes have been at the center of major historical moments for centuries. From royal weddings to...",
+          image: "img/BLOGS/blog004.png",
+          content: "blog4.html"
+        }
+      ];
+  
+      // Dynamically render blog posts
+      blogs.forEach((blog) => {
+        const blogPost = document.createElement('article');
+        blogPost.classList.add('blog-post');
+  
+        blogPost.innerHTML = `
+          <div class="blog-content">
+            <a href="${blog.content}"><h2>${blog.title}</h2></a>
+            <p class="meta">Published by ${blog.author} on ${blog.date}</p>
+            <a href="${blog.content}"><p class="excerpt">${blog.excerpt}</p></a>
+            <a href="${blog.content}" class="read-more">Read More →</a>
+            <a href="${blog.content}"><img src="${blog.image}" alt="${blog.title} "></a>
+          </div>
+        `;
+        blogContainer.appendChild(blogPost);
+      });
+  
+      // Menu functionality
+      let menu = document.querySelector('#menu-icon');
+      let navlist = document.querySelector('.navlist');
+  
+      menu.onclick = () => {
+        menu.classList.toggle('bx-x');
+        navlist.classList.toggle('open');
+      };
+    });
+  </script>
+   
+</body>
+</html>

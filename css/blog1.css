@@ -1,0 +1,81 @@
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
+
+.container2 {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Header */
+  header {
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .back-btn2 {
+    font-size: 14px;
+    color: #555;
+    text-decoration: none;
+  }
+  
+  .page-title2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #6a3dff;
+    margin-top: 10px;
+  }
+  
+  .date2 {
+    font-size: 14px;
+    color: #777;
+    margin-top: 5px;
+  }
+  
+  /* Intro Section */
+  .intro2 {
+    text-align: center;
+    padding: 30px 0;
+  }
+  
+  .intro-text2 {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Trends Section */
+  .trends2 {
+    padding: 20px 0;
+  }
+  
+  .trends2 h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff4f5a;
+    margin-bottom: 15px;
+  }
+  
+  .trends2 p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Image */
+  .image2 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  
