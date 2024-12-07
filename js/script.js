@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
   
       // Concatenate name, age, and checkbox IDs with '&' as separator
-      var link = `https://anessaadi/github.io/cakepreview?a=${nameValue}_${ageValue}_${checkbox1}_${checkbox2}_${checkbox3}`;
+      var link = `https://anessaadi.github.io/cakepreview?a=${nameValue}&${ageValue}&${checkbox1}&${checkbox2}&${checkbox3}`;
   
       // Create modal
       var modal = document.createElement('div');
