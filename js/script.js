@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /// ancien //////
-////// comment //////
 
 document.addEventListener('DOMContentLoaded', function () {
   
@@ -186,8 +185,8 @@ document.addEventListener('DOMContentLoaded', function () {
           checkbox3 = selectedCheckboxSet3.id;
       }
   
-      // Concatenate name, age, and checkbox IDs with '&' as separator
-      var link = `file:///C:/Users/NITRO%205/Documents/nounouch%20website/index.html?a=${nameValue}_${ageValue}_${checkbox1}_${checkbox2}_${checkbox3}`;
+      // Concatenate name, age, and checkbox IDs with '&' as separator  ---->  '_'
+      var link = `anessaadi.github.io/cakelia?a=${nameValue}_${ageValue}_${checkbox1}_${checkbox2}_${checkbox3}`;
   
       // Create modal
       var modal = document.createElement('div');
