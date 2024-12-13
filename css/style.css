@@ -772,6 +772,7 @@ width: 29em;
   border-bottom: solid 1px #290132;
   color: #290132;
   max-width: 100px;
+  border-radius: 0%;
   
 }
 .input2 {
