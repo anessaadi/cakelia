@@ -1394,14 +1394,14 @@ width: 29em;
 /* For iOS devices */
 @media (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) {
   .base-imagemob {
-      top: 415px;
+      top: 500px;
   }
 }
 
-/* For Android and Windows devices */
+/* For Android and Windows devices iPhooooone*/
 @media screen and (min-width: 375px) {
   .base-imagemob {
-      top: 500px;
+      top: 415px;
   }
 }
 
