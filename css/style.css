@@ -981,7 +981,7 @@ width: 29em;
       .base-imagemob{
         position: absolute;
         /* left: calc( 60% - 310px ); */
-        top: 415px;
+        top: 412px;
 /*           /// 411 to 415 // */
         /* bottom: -5px; */
         
@@ -1392,11 +1392,11 @@ width: 29em;
 }
 
 /* For iOS devices */
-@media (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) {
+/* @media (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) {
   .base-imagemob {
       top: 500px;
   }
-}
+} */
 
 /* For Android and Windows devices iPhooooone*/
 @media screen and (min-width: 375px) {
