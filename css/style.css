@@ -635,6 +635,7 @@ width: 29em;
           margin-top: -20px;
           flex-direction: column;
           display: inline-flex;
+          align-items: end;
       }
 
       .cake-preview img {
@@ -981,6 +982,8 @@ width: 29em;
         position: absolute;
         /* left: calc( 60% - 310px ); */
         top: 411px;
+        /* bottom: -5px; */
+        
        
       }
      
