@@ -981,7 +981,8 @@ width: 29em;
       .base-imagemob{
         position: absolute;
         /* left: calc( 60% - 310px ); */
-        top: 413px;
+        top: 415px;
+/*           /// 411 to 415 // */
         /* bottom: -5px; */
         
        
