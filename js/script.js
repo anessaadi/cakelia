@@ -1,4 +1,26 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const inputs = {
+      fname: document.getElementById("fname"),
+      fname2: document.getElementById("fname2"),
+      age: document.getElementById("age"),
+      age2: document.getElementById("age2"),
+  };
 
+  function syncInputs(input1, input2) {
+      input1.addEventListener("input", () => {
+          input2.value = input1.value;
+      });
+      input2.addEventListener("input", () => {
+          input1.value = input2.value;
+      });
+  }
+
+  // Synchronize fname and fname2
+  syncInputs(inputs.fname, inputs.fname2);
+
+  // Synchronize age and age2
+  syncInputs(inputs.age, inputs.age2);
+});
 
 /// ancien //////
 
@@ -38,9 +60,11 @@ document.addEventListener('DOMContentLoaded', function () {
   
     function updateFloatingImageSrc(checkbox, imageNumber) {
       var floatingImage = document.querySelector('.floating-image' + imageNumber);
+      var floating = document.querySelector('.floating' + imageNumber);
       if (checkbox) {
         var checkboxId = checkbox.id;
-        floatingImage.src = checkboxId + '.png';
+        floatingImage.src =  checkboxId + '.png';
+        floating.src =  checkboxId + '.png';
       }
     }
   
@@ -105,9 +129,11 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         function updateFloatingImageSrc(checkbox, imageNumber) {
     var floatingImage = document.querySelector('.floating-image' + imageNumber);
+    var floating = document.querySelector('.floating' + imageNumber);
     if (checkbox) {
       var checkboxId = checkbox.id;
       floatingImage.src = checkboxId + '.png';
+      floating.src = checkboxId + '.png';
     }
   }
   
@@ -160,7 +186,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
   
       // Concatenate name, age, and checkbox IDs with '&' as separator
-      var link = `https://anessaadi.github.io/cakepreview?a=${nameValue}&${ageValue}&${checkbox1}&${checkbox2}&${checkbox3}`;
+      var link = `file:///C:/Users/NITRO%205/Documents/nounouch%20website/index.html?a=${nameValue}_${ageValue}_${checkbox1}_${checkbox2}_${checkbox3}`;
   
       // Create modal
       var modal = document.createElement('div');
@@ -178,6 +204,53 @@ document.addEventListener('DOMContentLoaded', function () {
       // Append modal to the body
       document.body.appendChild(modal);
   }
+  function generateLink2() {
+    var nameValue = document.getElementById('fname2').value;
+    var ageValue = document.getElementById('age2').value;
+
+    // Validate input fields
+    if (nameValue.trim() === '' || ageValue.trim() === '') {
+        alert('Please fill in all required fields.');
+        return;
+    }
+
+    // Initialize variables for checkbox IDs
+    var checkbox1 = '14';
+    var checkbox2 = '24';
+    var checkbox3 = '33';
+
+    // Update checkbox IDs if selected
+    if (selectedCheckboxSet1) {
+        checkbox1 = selectedCheckboxSet1.id;
+    }
+
+    if (selectedCheckboxSet2) {
+        checkbox2 = selectedCheckboxSet2.id;
+    }
+
+    if (selectedCheckboxSet3) {
+        checkbox3 = selectedCheckboxSet3.id;
+    }
+
+    // Concatenate name, age, and checkbox IDs with '&' as separator
+    var link = `file:///C:/Users/NITRO%205/Documents/nounouch%20website/index.html?a=${nameValue}_${ageValue}_${checkbox1}_${checkbox2}_${checkbox3}`;
+
+    // Create modal
+    var modal = document.createElement('div');
+    modal.className = 'modal';
+
+    // Create content for the modal
+    var modalContent = '<div class="modal-content">';
+    modalContent += '<span class="close" onclick="closeModal()">&times;</span>';
+    modalContent += `<p class="txtmodal">Link: <input type="text" id="generatedLink" value="${link}" readonly></p>`;
+    modalContent += '<button class="buttonmodal" onclick="copyLink()">Copy Link</button>';
+    modalContent += '<div class="copy-message" id="copyMessage">Copied! Share it <3</div>';
+    modalContent += '</div>';
+    modal.innerHTML = modalContent;
+
+    // Append modal to the body
+    document.body.appendChild(modal);
+}
     
         function copyLink() {
           var generatedLink = document.getElementById('generatedLink');
