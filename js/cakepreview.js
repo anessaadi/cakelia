@@ -6,6 +6,44 @@ menu.onclick = () => {
     navlist.classList.toggle('open');
 };
 
+
+function detectWebview() {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    // List of app-specific user agent keywords
+    const webviewKeywords = [
+      "Instagram",
+      "Messenger",
+      "FBAN",
+      "FBAV",
+      "WhatsApp",
+      "Telegram",
+      "Twitter",
+      "TikTok",
+      "LinkedIn",
+      "Snapchat",
+      "MicroMessenger", // WeChat
+      "Line",
+      "Viber",
+      "KAKAOTALK",
+      "Pinterest",
+      "Reddit"
+    ];
+
+    // Check if any keyword matches the user agent
+    const isWebview = webviewKeywords.some(keyword => userAgent.includes(keyword));
+
+    if (isWebview) {
+      // Show the navigator notification
+      const notification = document.getElementById("navigator-notification");
+      if (notification) {
+        notification.style.display = "flex"; // Display the notification
+      }
+    }
+  }
+
+  // Run the detection
+  detectWebview();
 function closeNotification(id) {
     document.getElementById(id).style.display = 'none';
   }
