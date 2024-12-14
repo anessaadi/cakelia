@@ -181,7 +181,7 @@ const selectedCheckboxSet3 = paramsArray[4];
   } else {
     nameElement.innerHTML = 'Happy Birthday ...!';
   }
- console.log("mehbooooool");
+//  console.log("mehbooooool");
   // Your JavaScript code here
   // const audioContext = new (window.AudioContext || window.webkitAudioContext)();
   let mic;
@@ -203,7 +203,7 @@ const selectedCheckboxSet3 = paramsArray[4];
 
       function analyzeVolume() {
         analyser.getByteFrequencyData(dataArray);
-        console.log('Amplitude Data:', dataArray);
+        // console.log('Amplitude Data:', dataArray);
 
         // Calculate averageVolume from frequency data
         const averageVolume = dataArray.reduce((sum, value) => sum + value, 0) / bufferLength;
@@ -255,7 +255,7 @@ const selectedCheckboxSet3 = paramsArray[4];
         }
 
         // Log averageVolume to console
-        console.log('Average Volume:', averageVolume);
+        // console.log('Average Volume:', averageVolume);
       }
 
       setInterval(analyzeVolume, 100); // Log every 0.1 seconds
@@ -276,7 +276,7 @@ const selectedCheckboxSet3 = paramsArray[4];
 
     })
     .catch((error) => {
-      console.error('Error accessing microphone:', error);
+      // console.error('Error accessing microphone:', error);
     });
 
 

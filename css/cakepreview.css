@@ -289,18 +289,15 @@ body {
   
     .flame-video {
       position: fixed;
-      bottom: calc(50vw + 140px); /* Initial position */
+      bottom: calc(50vw + 140px); 
       width: 200px;
       height: auto;
-      /* margin-left: auto; */
-      /* right: 3vw; */
-      left: 48%;
+      left: 50%;
       transform: translateX(-50%);
       z-index: 0;
       display: block;
-      /* mix-blend-mode: normal; */
       width: 50%;
-      animation: moveDown 1s linear forwards; /* Optional animation on load */
+      animation: moveDown 1s linear forwards; 
     }
   }
   
@@ -500,15 +497,13 @@ body {
     bottom: calc(79vw + 10px); 
     left: calc(50% + 0px);
   }
-  .container{
+  /* .container{
     position: absolute;
     margin-left: 0%;
     margin-right: 0%;
     width: 100vw;
-    /* left: auto; */
-    /* right: auto; */
     
-  }
+  } */
   body{
     width: 100vw;
   }
@@ -525,7 +520,7 @@ body {
   position: absolute;
   z-index: 801;
   left: calc(50% - 20px);
-  top: 600px;
+  top: 92%;
   width: 40px;
   cursor: pointer;
   display: none;
