@@ -180,43 +180,44 @@ body {
   
   .notifications {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 10000;
+    width: 90%; /* Adjust for smaller screens */
+    max-width: 400px; /* Limit the size for larger screens */
   }
-  
+
   .notification {
     background-color: #69337C;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    padding: 15px;
     color: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     position: relative;
-    padding-right: 35px;  /* Space for the X button */
-    display: none;
+    padding-right: 50px; /* Space for the X button */
+    display: none; /* Hidden by default */
   }
-  
+
   .notification p {
     margin: 0;
-    font-size: 14px;
+    font-size: 16px; /* Make the text easier to read */
+    line-height: 1.5;
   }
-  
+
   .close-btn {
     background: none;
     border: none;
     color: white;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
     position: absolute;
     top: 10px;
     right: 10px;
   }
-  
+
   .close-btn:hover {
     color: #FF7373;
   }
