@@ -525,7 +525,7 @@ body {
   position: absolute;
   z-index: 801;
   left: calc(50% - 20px);
-  top: 92%;
+  bottom: 8%;
   width: 40px;
   cursor: pointer;
   display: none;
