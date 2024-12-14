@@ -61,10 +61,10 @@ function close1() {
   
   
   // Function to get URL parameter value by name
-  function getParameterByName(name, url) {
+function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, '\\$&');
-    const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
+    const regex = new RegExp('[?_]' + name + '(=([^#]*)|_|#|$)');
     const results = regex.exec(url);
     if (!results) return null;
     if (!results[2]) return '';
@@ -97,14 +97,18 @@ const currentUrl = window.location.href;
 // Get values from URL parameters
 const capitalizeFirstLetter = (string) => (string ? string.charAt(0).toUpperCase() + string.slice(1) : '');
 
-const nameParam = capitalizeFirstLetter(getParameterByName('a', currentUrl));
-const paramsArray = currentUrl.split('&');
 
+const fullParam = getParameterByName('a', currentUrl);
+
+// const nameParam = capitalizeFirstLetter(getParameterByName('a', currentUrl));
+const paramsArray = fullParam.split('_');
+const nameParam = capitalizeFirstLetter(paramsArray[0]);
 // Extracting values based on position in the URL
 const ageParam = paramsArray[1];
 const selectedCheckboxSet1 = paramsArray[2];
 const selectedCheckboxSet2 = paramsArray[3];
 const selectedCheckboxSet3 = paramsArray[4];
+
 
 // console.log("Name:", nameParam);
 // console.log("Age:", ageParam);
