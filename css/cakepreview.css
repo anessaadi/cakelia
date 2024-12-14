@@ -256,10 +256,7 @@ body {
       max-width: 450px;
     }
   
-    .notifications {
-      width: 90%;
-      right: 5%;
-    }
+    
   }
   
   @media (max-width: 480px) {
@@ -272,21 +269,8 @@ body {
     }
     
   
-    .notifications {
-      width: 94%;
-      bottom: 10px;
-      right: 3%;
-      left: 3%;
-    }
   
-    .notification {
-      padding: 10px;
-      font-size: 12px;
-    }
-  
-    .close-btn {
-      font-size: 14px;
-    }
+   
     .cake-wrapper {
       width: 100%;
       position: relative; /* Ensure the wrapper maintains layout */
