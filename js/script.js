@@ -26,9 +26,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener('DOMContentLoaded', function () {
   
-    var selectedCheckboxSet1 = null;
-    var selectedCheckboxSet2 = null;
-    var selectedCheckboxSet3 = null;
+  document.getElementById('14').checked = true;
+  document.getElementById('24').checked = true;
+  document.getElementById('33').checked = true;
+
+  let selectedCheckboxSet1 = document.getElementById('14');
+    let selectedCheckboxSet2 = document.getElementById('24');
+    let selectedCheckboxSet3 = document.getElementById('33');
   
     function updateSelected(checkbox, setNumber) {
       switch (setNumber) {
@@ -80,21 +84,33 @@ document.addEventListener('DOMContentLoaded', function () {
   
     // Event listeners for checkbox sets
     document.querySelectorAll('.checkbox-set-1 input[type="checkbox"]').forEach(function (checkbox) {
-      checkbox.addEventListener('click', function () {
-        updateSelected(checkbox, 1);
-      });
+        checkbox.addEventListener('click', function (event) {
+            if (checkbox === selectedCheckboxSet1) {
+                event.preventDefault(); // Prevent unchecking the current checkbox
+            } else {
+                updateSelected(checkbox, 1);
+            }
+        });
     });
-  
+
     document.querySelectorAll('.checkbox-set-2 input[type="checkbox"]').forEach(function (checkbox) {
-      checkbox.addEventListener('click', function () {
-        updateSelected(checkbox, 2);
-      });
+        checkbox.addEventListener('click', function (event) {
+            if (checkbox === selectedCheckboxSet2) {
+                event.preventDefault();
+            } else {
+                updateSelected(checkbox, 2);
+            }
+        });
     });
-  
+
     document.querySelectorAll('.checkbox-set-3 input[type="checkbox"]').forEach(function (checkbox) {
-      checkbox.addEventListener('click', function () {
-        updateSelected(checkbox, 3);
-      });
+        checkbox.addEventListener('click', function (event) {
+            if (checkbox === selectedCheckboxSet3) {
+                event.preventDefault();
+            } else {
+                updateSelected(checkbox, 3);
+            }
+        });
     });
   });
   
