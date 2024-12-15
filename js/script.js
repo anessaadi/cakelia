@@ -105,55 +105,68 @@ document.addEventListener('DOMContentLoaded', function () {
     
         function updateSelected(checkbox, setNumber) {
           switch (setNumber) {
-            case 1:
-              if (selectedCheckboxSet1 && selectedCheckboxSet1 !== checkbox) {
-                selectedCheckboxSet1.checked = false;
-              }
-              selectedCheckboxSet1 = checkbox.checked ? checkbox : null;
-              break;
-            case 2:
-              if (selectedCheckboxSet2 && selectedCheckboxSet2 !== checkbox) {
-                selectedCheckboxSet2.checked = false;
-              }
-              selectedCheckboxSet2 = checkbox.checked ? checkbox : null;
-              break;
-            case 3:
-              if (selectedCheckboxSet3 && selectedCheckboxSet3 !== checkbox) {
-                selectedCheckboxSet3.checked = false;
-              }
-              selectedCheckboxSet3 = checkbox.checked ? checkbox : null;
-              break;
-            default:
-              break;
+              case 1:
+                  if (selectedCheckboxSet1 && selectedCheckboxSet1 !== checkbox) {
+                      selectedCheckboxSet1.checked = false;
+                  }
+                  selectedCheckboxSet1 = checkbox;
+                  break;
+              case 2:
+                  if (selectedCheckboxSet2 && selectedCheckboxSet2 !== checkbox) {
+                      selectedCheckboxSet2.checked = false;
+                  }
+                  selectedCheckboxSet2 = checkbox;
+                  break;
+              case 3:
+                  if (selectedCheckboxSet3 && selectedCheckboxSet3 !== checkbox) {
+                      selectedCheckboxSet3.checked = false;
+                  }
+                  selectedCheckboxSet3 = checkbox;
+                  break;
+              default:
+                  break;
           }
-        }
+      }
+      
         function updateFloatingImageSrc(checkbox, imageNumber) {
-    var floatingImage = document.querySelector('.floating-image' + imageNumber);
-    var floating = document.querySelector('.floating' + imageNumber);
-    if (checkbox) {
-      var checkboxId = checkbox.id;
-      floatingImage.src = checkboxId + '.png';
-      floating.src = checkboxId + '.png';
-    }
-  }
+            var floatingImage = document.querySelector('.floating-image' + imageNumber);
+            var floating = document.querySelector('.floating' + imageNumber);
+            if (checkbox) {
+              var checkboxId = checkbox.id;
+              floatingImage.src = checkboxId + '.png';
+              floating.src = checkboxId + '.png';
+            }
+          }
   
-  document.querySelectorAll('.checkbox-set-1 input[type="checkbox"]').forEach(function (checkbox) {
-    checkbox.addEventListener('click', function () {
-      updateSelected(checkbox, 1);
+      document.querySelectorAll('.checkbox-set-1 input[type="checkbox"]').forEach(function (checkbox) {
+        checkbox.addEventListener('click', function (event) {
+            if (checkbox === selectedCheckboxSet1) {
+                event.preventDefault(); // Prevent unchecking the current checkbox
+            } else {
+                updateSelected(checkbox, 1);
+            }
+        });
     });
-  });
-  
-  document.querySelectorAll('.checkbox-set-2 input[type="checkbox"]').forEach(function (checkbox) {
-    checkbox.addEventListener('click', function () {
-      updateSelected(checkbox, 2);
+
+    document.querySelectorAll('.checkbox-set-2 input[type="checkbox"]').forEach(function (checkbox) {
+        checkbox.addEventListener('click', function (event) {
+            if (checkbox === selectedCheckboxSet2) {
+                event.preventDefault();
+            } else {
+                updateSelected(checkbox, 2);
+            }
+        });
     });
-  });
-  
-  document.querySelectorAll('.checkbox-set-3 input[type="checkbox"]').forEach(function (checkbox) {
-    checkbox.addEventListener('click', function () {
-      updateSelected(checkbox, 3);
+
+    document.querySelectorAll('.checkbox-set-3 input[type="checkbox"]').forEach(function (checkbox) {
+        checkbox.addEventListener('click', function (event) {
+            if (checkbox === selectedCheckboxSet3) {
+                event.preventDefault();
+            } else {
+                updateSelected(checkbox, 3);
+            }
+        });
     });
-  });
         
         
       
