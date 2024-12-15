@@ -983,7 +983,7 @@ margin-top: -3px;
     .base-imagemob{
       position: absolute;
       /* left: calc( 60% - 310px ); */
-      top: 412px;
+      margin-top: 43px;
 /*           /// 411 to 415 // */
       /* bottom: -5px; */
       
@@ -1400,9 +1400,23 @@ transition: background-color 0.3s ease;
 }
 } */
 
+/* For mobile devices (touchscreen and smaller pointers) */
+/* @media (pointer: coarse) {
+  body {
+      background-color: lightblue;
+  }
+} */
+
+/* For desktop devices (precise pointing devices) */
+/* @media (pointer: fine) {
+  body {
+      background-color: lightgreen;
+  }
+} */
+
 /* For Android and Windows devices iPhooooone*/
-@media screen and (min-width: 375px) {
+/* @media screen and (min-width: 375px) {
 .base-imagemob {
     top: 415px;
 }
-}
+} */
