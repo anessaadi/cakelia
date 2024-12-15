@@ -26,13 +26,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener('DOMContentLoaded', function () {
   
+  const nameInput = document.getElementById("fname");
+    const maxLength = 30; // Set the maximum character limit
+
+    // Create and insert the character count element dynamically
+    // const charCount = document.createElement("p");
+    // charCount.id = "char-count";
+    // charCount.style.fontSize = "12px";
+    // charCount.style.color = "gray";
+    // charCount.textContent = `0/${maxLength} characters used`;
+    // nameInput.parentNode.appendChild(charCount);
+
+    // Enforce character limit and update count
+    nameInput.addEventListener("input", function () {
+        const currentLength = nameInput.value.length;
+
+        if (currentLength > maxLength) {
+            // Trim the input value if it exceeds the limit
+            nameInput.value = nameInput.value.substring(0, maxLength);
+        }
+
+        // Update the character count
+        charCount.textContent = `${nameInput.value.length}/${maxLength} characters used`;
+    });
   document.getElementById('14').checked = true;
   document.getElementById('24').checked = true;
   document.getElementById('33').checked = true;
 
   let selectedCheckboxSet1 = document.getElementById('14');
-    let selectedCheckboxSet2 = document.getElementById('24');
-    let selectedCheckboxSet3 = document.getElementById('33');
+  let selectedCheckboxSet2 = document.getElementById('24');
+  let selectedCheckboxSet3 = document.getElementById('33');
   
     function updateSelected(checkbox, setNumber) {
       switch (setNumber) {
