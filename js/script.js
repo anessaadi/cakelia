@@ -238,7 +238,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
   
       // Concatenate name, age, and checkbox IDs with '&' as separator  ---->  '_'
-      var link = `www.cakelia.com/cakepreview.html?a=${nameValue}_${ageValue}_${checkbox1}_${checkbox2}_${checkbox3}_`;
+      var link = `www.cakelia.com/cakepreview?a=${nameValue}_${ageValue}_${checkbox1}_${checkbox2}_${checkbox3}_`;
   
       // Create modal
       var modal = document.createElement('div');
@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Concatenate name, age, and checkbox IDs with '&' as separator
-    var link = `www.cakelia.com/cakepreview.html?a=${nameValue}_${ageValue}_${checkbox1}_${checkbox2}_${checkbox3}_`;
+    var link = `www.cakelia.com/cakepreview?a=${nameValue}_${ageValue}_${checkbox1}_${checkbox2}_${checkbox3}_`;
 
     // Create modal
     var modal = document.createElement('div');
